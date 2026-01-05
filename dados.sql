@@ -1,0 +1,6 @@
+CREATE TABLE tbl_users(
+    id_cliente SERIAL PRIMARY KEY,
+	nome VARCHAR(65) NOT NULL,
+	email VARCHAR(80) NOT NULL,
+	senha VARCHAR(8) NOT NULL,
+)
