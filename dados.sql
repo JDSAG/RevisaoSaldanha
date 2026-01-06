@@ -14,8 +14,10 @@ CREATE TABLE tbl_viagens(
 	data_saida DATE NOT NULL,
 	valor INT NOT NULL
 );
-
+INSERT INTO tbl_users(nome, email, senha) VALUES
+	('Jeremias','dossantosjeremias@gmail.com','12345678')
 INSERT INTO tbl_viagens(local_saida, local_destinado, data_saida, valor) VALUES
+	('Brasil','Mexico','2026-01-03',3000),
 	('Brasil','Noruega','2026-01-01',4200),
 	('Brasil','Mexico','2026-01-02',3000),
 	('Brasil','Russia','2025-12-20',3500);
@@ -44,21 +46,5 @@ CREATE INDEX idx_reservas_viagem ON tbl_reservas(id_viagem);
 INSERT INTO tbl_reservas (id_cliente, id_viagem, status) VALUES
     (1, 1, 'confirmada'),
     (1, 2, 'pendente');
-
-SELECT 
-    r.id_reserva,
-    r.data_reserva,
-    r.status,
-    u.id_cliente,
-    u.nome,
-    u.email,
-    v.id_viagem,
-    v.local_saida,
-    v.local_destinado,
-    v.data_saida,
-    v.valor
-FROM tbl_reservas r
-INNER JOIN tbl_users u ON r.id_cliente = u.id_cliente
-INNER JOIN tbl_viagens v ON r.id_viagem = v.id_viagem;
 
 

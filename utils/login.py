@@ -29,7 +29,6 @@ def login(nome:str,email:str, senha:str):
                     else:
                         print("Usuário não encontrado")
                         return None
-
                 except Exception as e:
                     print(f"Erro no login: {e}")
                     return None
