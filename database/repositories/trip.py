@@ -1,6 +1,6 @@
 from database.connection import * 
 from database.queries import * 
-
+from validations import validations as v
 def buy_trip (id_cliente:int,id_viagem:int,status:str):
     with get_connection() as CONN:
         if CONN is not None:

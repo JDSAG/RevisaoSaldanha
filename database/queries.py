@@ -26,3 +26,5 @@ CANCEL_TRIP = '''DELETE FROM tbl_reservas WHERE id_reserva = %s'''
 UPDATE_DATE_TRIP = '''UPDATE tbl_reservas SET id_viagem =%s WHERE id_cliente = %s AND id_viagem = %s'''
 
 CHECK_ALL_TRIPS = '''SELECT * FROM tbl_viagens'''
+
+SEARCH_ID_TRIP = '''SELECT id_viagem FROM tbl_viagens WHERE id_viagem = %s'''
